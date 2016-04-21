@@ -5,8 +5,8 @@
   "scripts": {
     "lint": "eslint app webpack.config.js",
     "prebuild": "rm -rf build/*",
-    "build": "NODE_ENV=production webpack -c --progress",
-    "start": "NODE_ENV=production webpack-dev-server --content-base app/ --inline --hot --progress --colors",
+    "build": "NODE_ENV=production webpack --optimize-dedupe --optimize-occurence-order --optimize-minimize --progress --colors",
+    "start": "NODE_ENV=development webpack-dev-server --content-base app/ --inline --hot --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
