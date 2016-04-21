@@ -3,4 +3,6 @@ import ReactDOM from 'react-dom';
 
 import MainLayout from './components/layouts/main-layout';
 
-ReactDOM.render(<MainLayout />, document.getElementById('root'));
+let el = document.createElement('div');
+document.body.appendChild(el);
+ReactDOM.render(<MainLayout />, el);

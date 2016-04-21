@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const DEBUG = process.env.NODE_ENV !== 'production';
 
@@ -31,5 +32,8 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(DEBUG ? 'development' : 'production'),
     }),
     new ExtractTextPlugin('styles.css'),
+    new HtmlWebpackPlugin({
+      title: 'Todo-ui-react'
+    }),
   ],
 };
