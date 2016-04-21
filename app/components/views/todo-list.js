@@ -1,11 +1,12 @@
 import React from 'react';
+import style from './todo-list.css';
 
 function TodoList(props) {
   return (
-    <div className="data-list">
+    <div className={style.dataList}>
       {props.todos.map(todo =>
         (
-          <div key={todo.id} className="data-list-item">
+          <div key={todo.id} className={style.listItem}>
             <div className="details">{todo.title}</div>
           </div>
         )
