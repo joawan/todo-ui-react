@@ -7,8 +7,8 @@ class TodoListContainer extends React.Component {
     super(props);
     this.state = {
       todos: [
-        { id: 1, title: 'Get started with react' },
-        { id: 2, title: 'Get shit done' },
+        { id: 1, title: 'Get started with react', done: false },
+        { id: 2, title: 'Get shit done', done: false },
       ],
     };
   }

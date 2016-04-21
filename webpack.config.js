@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.css/,
         loader: ExtractTextPlugin.extract(
-          'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+          'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]&camelCase'
         ),
       },
     ],
@@ -33,7 +33,7 @@ module.exports = {
     }),
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
-      title: 'Todo-ui-react'
+      title: 'Todo-ui-react',
     }),
   ],
 };
