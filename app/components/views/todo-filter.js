@@ -11,19 +11,19 @@ function TodoFilter() {
           </span>
           <ul className={style.filters}>
             <li>
-              <a href="#/" className={ classNames({ [`${style.selected}`]: true }) }>
+              <a href="#/" className={ classNames({ [style.selected]: true }) }>
                 All
               </a>
             </li>
             {' '}
             <li>
-              <a href="#/active" className={ classNames({ [`${style.selected}`]: false }) }>
+              <a href="#/active" className={ classNames({ [style.selected]: false }) }>
                 Active
               </a>
             </li>
             {' '}
             <li>
-              <a href="#/completed" className={ classNames({ [`${style.selected}`]: false }) }>
+              <a href="#/completed" className={ classNames({ [style.selected]: false }) }>
                 Completed
               </a>
             </li>
