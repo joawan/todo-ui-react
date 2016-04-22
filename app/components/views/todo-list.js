@@ -1,5 +1,6 @@
 import React from 'react';
 import style from 'todomvc-app-css/index.css';
+import TodoItem from './todo-item';
 
 function TodoList(props) {
   return (
@@ -7,22 +8,10 @@ function TodoList(props) {
       <ul className={style.todoList}>
       {props.todos.map(todo =>
         (
-          <li key={todo.id}>
-            <div className={style.view}>
-            <input
-              className={style.toggle}
-              type="checkbox"
-              checked={todo.done}
-            />
-            <label>
-              {todo.title}
-            </label>
-            <button className={style.destroy} />
-          </div>
-          <input
-            className={style.edit}
+          <TodoItem
+            key={todo.id}
+            todo={todo}
           />
-          </li>
         )
       )}
       </ul>
