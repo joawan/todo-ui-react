@@ -1,6 +1,6 @@
 import React from 'react';
 import style from 'todomvc-app-css/index.css';
-import TodoItem from './todo-item';
+import TodoItemContainer from '../containers/todo-item-container';
 
 function TodoList(props) {
   return (
@@ -8,7 +8,7 @@ function TodoList(props) {
       <ul className={style.todoList}>
       {props.todos.map(todo =>
         (
-          <TodoItem
+          <TodoItemContainer
             key={todo.id}
             todo={todo}
           />

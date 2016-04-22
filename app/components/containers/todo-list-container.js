@@ -15,7 +15,10 @@ class TodoListContainer extends React.Component {
 
   render() {
     return (
-      <TodoList todos={this.state.todos} />
+      <TodoList
+        todos={this.state.todos}
+        onToggle={this.toggle}
+      />
     );
   }
 

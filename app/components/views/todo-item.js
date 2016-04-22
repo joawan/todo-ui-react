@@ -10,11 +10,12 @@ function TodoItem(props) {
           type="checkbox"
           checked={props.todo.done}
           className={style.toggle}
+          onChange={props.onToggle}
         />
         <label>
           {props.todo.title}
         </label>
-        <button className={style.destroy} />
+        <button className={style.destroy} onClick={props.onDestroy} />
       </div>
       <input
         className={style.edit}
@@ -25,6 +26,8 @@ function TodoItem(props) {
 
 TodoItem.propTypes = {
   todo: React.PropTypes.object.isRequired,
+  onToggle: React.PropTypes.func.isRequired,
+  onDestroy: React.PropTypes.func.isRequired,
 };
 
 export default TodoItem;
