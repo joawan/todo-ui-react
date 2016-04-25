@@ -1,21 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import TodoFilter from '../views/todo-filter';
 
-class TodoFilterContainer extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
-  render() {
-    return (
-      <TodoFilter />
-    );
-  }
-
+function TodoFilterContainer(props) {
+  const count = props.todos.reduce((prev, curr) => (!curr.done ? prev + 1 : prev), 0);
+  return (
+    <TodoFilter count={count} />
+  );
 }
 
-export default TodoFilterContainer;
+TodoFilterContainer.propTypes = {
+  todos: React.PropTypes.array.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  todos: state.todoState.todos,
+});
+
+export default connect(mapStateToProps)(TodoFilterContainer);

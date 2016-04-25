@@ -2,12 +2,12 @@ import React from 'react';
 import style from 'todomvc-app-css/index.css';
 import classNames from 'classnames';
 
-function TodoFilter() {
+function TodoFilter(props) {
   return (
     <div>
       <footer className={style.footer}>
           <span className={style.todoCount}>
-            <strong>2</strong> left
+            <strong>{props.count}</strong> left
           </span>
           <ul className={style.filters}>
             <li>
