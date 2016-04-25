@@ -11,11 +11,11 @@ class TodoItemContainer extends React.Component {
   }
 
   toggle() {
-    console.log('toggle', this.props);
+
   }
 
   destroy() {
-    console.log('destroy', this.props);
+
   }
 
   render() {
