@@ -17,9 +17,6 @@ function TodoItem(props) {
         </label>
         <button className={style.destroy} onClick={props.onDestroy} />
       </div>
-      <input
-        className={style.edit}
-      />
     </li>
   );
 }
