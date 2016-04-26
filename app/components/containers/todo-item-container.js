@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { updateTodoSuccess, deleteTodoSuccess } from '../../actions/todo-actions';
 import TodoItem from '../views/todo-item';
 
 class TodoItemContainer extends React.Component {
@@ -10,11 +12,13 @@ class TodoItemContainer extends React.Component {
   }
 
   toggle() {
-
+    const todo = Object.assign({}, this.props.todo, { done: !this.props.todo.done });
+    this.props.dispatch(updateTodoSuccess(todo));
   }
 
   destroy() {
-
+    const todo = Object.assign({}, this.props.todo);
+    this.props.dispatch(deleteTodoSuccess(todo));
   }
 
   render() {
@@ -31,6 +35,7 @@ class TodoItemContainer extends React.Component {
 
 TodoItemContainer.propTypes = {
   todo: React.PropTypes.object.isRequired,
+  dispatch: React.PropTypes.func.isRequired,
 };
 
-export default TodoItemContainer;
+export default connect()(TodoItemContainer);
