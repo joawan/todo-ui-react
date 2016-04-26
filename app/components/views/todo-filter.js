@@ -33,4 +33,8 @@ function TodoFilter(props) {
   );
 }
 
+TodoFilter.propTypes = {
+  count: React.PropTypes.number.isRequired,
+};
+
 export default TodoFilter;

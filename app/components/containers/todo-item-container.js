@@ -5,7 +5,6 @@ class TodoItemContainer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
     this.toggle = this.toggle.bind(this);
     this.destroy = this.destroy.bind(this);
   }
