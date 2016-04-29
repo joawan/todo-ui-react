@@ -1,7 +1,7 @@
 {
   "name": "todo-ui-react",
   "version": "0.1.0",
-  "description": "Simple UI for todos using Reactjs",
+  "description": "Simple UI for todos using React, Redux and TodoMVC CSS",
   "scripts": {
     "lint": "eslint app webpack.config.js",
     "prebuild": "rm -rf build/*",
